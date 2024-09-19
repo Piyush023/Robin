@@ -77,3 +77,24 @@ To learn more about React Native, take a look at the following resources:
 - [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
 - [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
 - [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+
+# Notes - 
+How to Change the App name - 
+1. Android - Change the Name in the App.Json, Settings.gradle, Strings.xml and MainActivity.kt files
+2. IOS - Trying to figure it out.
+
+# App Registry - 
+AppRegistry is the JS entry point to running all React Native apps. App root components should register themselves with AppRegistry.registerComponent, then the native system can load the bundle for the app and then actually run the app when it's ready by invoking AppRegistry.runApplication. -
+
+AppRegistry.registerComponent("project", () => App);
+
+AppRegistry.runApplication - AppRegistry.runApplication("project", {
+    rootTag: document.getElementById("root")
+});
+
+Consist of all the methods required to register and run the application on the device.
+
+Consist of Multiple methods can be used to destroy(Kill) the app. - AppRegistry.unmountApplicationComponentAtRootTag and pass the rootElementTag
+
+# MetroConfig.Js - 
+This contains the configs for the compilation of the Javascript code into the native code modules(Android and IOS) and also update the configs for any changes during the compilation process. 
