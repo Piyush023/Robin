@@ -2,12 +2,8 @@ import React from 'react';
 import { DefaultTheme, NavigationContainer } from '@react-navigation/native';
 import { navigationRef } from '../utils/NavigationUtil';
 import { useCustomTheme } from './Theme';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import RootNavigator from './RootNavigator';
-import HomeScreen from '../screens/HomeScreen/HomeScreen';
-import LoginScreen from '../screens/Login/LoginScreen';
 
-const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   const theme = useCustomTheme();
 

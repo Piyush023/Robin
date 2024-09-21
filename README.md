@@ -111,7 +111,7 @@ This file is responsible for converting the JS to ES6 Version of code.
 Dependencies - react-navigation/native, react-native-screens, react-native-safe-area-context
 1. Navigation file in the navigation folder consists of the Navigation.tsx and all the NavigationContainer and Root Navigator is in that and Navigation Stack is in the RootNavigator.
 2. Not Using the useNavigation Hook and implementing own custom hook for the same -  Inside the NavigationUtil.tsx.
-3. Root navigator - Consists of all the Screen Stack Wrapped with the Stack.Navigator with the initialRouteName - BottomTabBar.
+3. Root navigator - Consists of all the Screen Stack Wrapped with the Stack.Navigator with the initialRouteName - BottomTabBar - This we can change to any screen which we want to show when the app is opened for the first time.
 
 After install @react-navigation/native you have to install two dependency - npm install react-native-screens react-native-safe-area-context
 
@@ -120,3 +120,25 @@ After install @react-navigation/native you have to install two dependency - npm 
 useColorScheme Hook React Native.
 1. Theme.tsx file consist of the all the colors in a Object for light and dark theme and the file has a useColorScheme hook used from the React Native.
 2. Color.tsx in the constants folder consist of all the colors in a object with color code and the name.
+
+
+<!-- Imp Commands and Library-->
+1. Lib - react-native-asset and Command - npx react-native-assets - This will link all the assets(Fonts) to the android and ios app build. and all the fonts path is being served from the react-native.config.js file.
+For Android - This is the list of the Vector Icons being used in the Android build and for this we need to add them into the build.gradle file inside the Android -> App -> build.gradle, For IOS - This is the list of the Vector Icons being used in the IOS build and for this we need to add them into the Info.plist file inside the IOS -> APP_NAME -> Info.plist
+
+2.
+Lib - import { useTheme } from '@react-navigation/native' - *This will access to current Theme of the device Dark or Light*
+and Also this -  
+/* Imp - Apart from telling about the Theme this also tells about the color -  
+  dark: boolean;
+  colors: {
+    primary: string;
+    background: string;
+    card: string;
+    text: string;
+    border: string;
+    notification: string;
+  };
+*/
+
+import { RFValue } from 'react-native-responsive-fontsize' -  
