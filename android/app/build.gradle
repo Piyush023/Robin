@@ -42,6 +42,12 @@ react {
     //   A list of extra flags to pass to the 'bundle' commands.
     //   See https://github.com/react-native-community/cli/blob/main/docs/commands.md#bundle
     // extraPackagerArgs = []
+    
+    // ** This is the list of the Vector Icons being used in the Android build and for this we need to add them into the build.gradle file **
+    project.ext.vectoricons = [
+          iconFontNames: [ 'MaterialCommunityIcons.ttf', 'EvilIcons.ttf',"MaterialIcons.ttf" ,"Ionicons.ttf","FontAwesome.ttf","AntDesign.ttf"]
+    ]
+    apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 
     /* Hermes Commands */
     //   The hermes compiler command to run. By default it is 'hermesc'
