@@ -108,10 +108,15 @@ This file is responsible for converting the JS to ES6 Version of code.
 # Notes and Topics To Read About - 
 
 <!-- Navigation -->
+Dependencies - react-navigation/native, react-native-screens, react-native-safe-area-context
 1. Navigation file in the navigation folder consists of the Navigation.tsx and all the NavigationContainer and Root Navigator is in that and Navigation Stack is in the RootNavigator.
 2. Not Using the useNavigation Hook and implementing own custom hook for the same -  Inside the NavigationUtil.tsx.
 3. Root navigator - Consists of all the Screen Stack Wrapped with the Stack.Navigator with the initialRouteName - BottomTabBar.
 
+After install @react-navigation/native you have to install two dependency - npm install react-native-screens react-native-safe-area-context
+
+
 <!-- ColorScheme -->
+useColorScheme Hook React Native.
 1. Theme.tsx file consist of the all the colors in a Object for light and dark theme and the file has a useColorScheme hook used from the React Native.
 2. Color.tsx in the constants folder consist of all the colors in a object with color code and the name.
