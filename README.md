@@ -132,7 +132,6 @@ How to Add assets -
 
 4. Icons - using the `@types/react-native-vector-icons` library - This gives us access to the different 3rd party icons.
 
-
 <!-- Imp Commands and Library-->
 1. Lib - react-native-asset and Command - `npx react-native-assets` - This will link all the assets(Fonts) to the android and ios app build. and all the fonts path is being served from the react-native.config.js file.
 **Imp Files - For the Fonts Configs**
@@ -152,4 +151,4 @@ and Also this -
     notification: string;
   };
 */
-`import { RFValue } from 'react-native-responsive-fontsize'` -  
+`import { RFValue } from 'react-native-responsive-fontsize'` -  This is about Scaling and Responsiveness of the App. - Explore this more.
