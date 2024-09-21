@@ -122,12 +122,24 @@ useColorScheme Hook React Native.
 2. Color.tsx in the constants folder consist of all the colors in a object with color code and the name.
 
 
-<!-- Imp Commands and Library-->
-1. Lib - react-native-asset and Command - npx react-native-assets - This will link all the assets(Fonts) to the android and ios app build. and all the fonts path is being served from the react-native.config.js file.
-For Android - This is the list of the Vector Icons being used in the Android build and for this we need to add them into the build.gradle file inside the Android -> App -> build.gradle, For IOS - This is the list of the Vector Icons being used in the IOS build and for this we need to add them into the Info.plist file inside the IOS -> APP_NAME -> Info.plist
+<!-- Assets -->
+How to Add assets - 
+1. Fonts - Fonts are the files added into the assets folder and then we need to link them into the IOS and Android build folder for that we have to add them into the below explained files. **Todo - Go Through it once**
 
-2.
-Lib - import { useTheme } from '@react-navigation/native' - *This will access to current Theme of the device Dark or Light*
+2. Images - Just Add them in the Image folder in the assets and use them from there.
+
+3. Svg - Here in this project we have used a Svg Transformer in the react-native.config and metro.config file from the react-native.config file it will pick the path of the svg and the metro.config will help in the rendering of the Svg during the execution phase. **Todo - Go Through it once**
+
+4. Icons - using the `@types/react-native-vector-icons` library - This gives us access to the different 3rd party icons.
+
+
+<!-- Imp Commands and Library-->
+1. Lib - react-native-asset and Command - `npx react-native-assets` - This will link all the assets(Fonts) to the android and ios app build. and all the fonts path is being served from the react-native.config.js file.
+**Imp Files - For the Fonts Configs**
+For Android - This is the list of the Vector Icons being used in the Android build and for this we need to add them into the build.gradle file inside the Android -> App -> build.gradle, For IOS - This is the list of the Vector Icons being used in the IOS build and for this we need to add them into the Info.plist file inside the IOS -> APP_NAME -> Info.plist
+and `npx react-native-asset` - To Link the Assets to the IOS and Android build.
+
+2. Lib - `import { useTheme } from '@react-navigation/native'` - **This will access to current Theme of the device Dark or Light**
 and Also this -  
 /* Imp - Apart from telling about the Theme this also tells about the color -  
   dark: boolean;
@@ -140,5 +152,4 @@ and Also this -
     notification: string;
   };
 */
-
-import { RFValue } from 'react-native-responsive-fontsize' -  
+`import { RFValue } from 'react-native-responsive-fontsize'` -  
