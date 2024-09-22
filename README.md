@@ -152,3 +152,33 @@ and Also this -
   };
 */
 `import { RFValue } from 'react-native-responsive-fontsize'` -  This is about Scaling and Responsiveness of the App. - Explore this more.
+
+# Social Logins - 
+<!-- Google Login --> 
+**Important Need to Learn About this**
+Lib - `react-native-google-signin/google-signin` and Docs - `https://www.npmjs.com/package/@react-native-google-signin/google-signin/v/10.1.2`
+Google Login using the Google Cloud - Create a new Project and Check the credential OAuth under the API and Service Menu. After this create a OAuth Client Id for the Web Application and in the Authorized JavaScript Origin - use the localhost for now (This is the URL whitelisting process this will whitelist the localhost url for the Google Auth to start working on the local server.)
+
+Create the OAuth for the Android and IOS Separate.
+
+`Android` - 
+1st create the OAuth using the Google Cloud - In this process there is a need of the package name of the android app build - Package Name - android -> app -> src -> main -> MainActivity.kt -> Package name line.
+// This is all for the Debug, Have to do this again for the Release.
+Also we need to get a Digital SHA signature key from this command inside the Android Folder. - Using the cmd - `keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android` - This will give the SHA sign required for the Google OAuth Client Setup for Android. Copy the SHA1 key value and paste it in the Google OAuth SHA1 Certificate fingerprint. This will give us a client id and other id needed for the Google Signin.
+Also we need to add this dep in the file Android -> build.gradle - classpath('com.google.gms:google-services:4.3.3') // This will add the dependency of the Google Service in the Android build.
+
+`IOS` - 
+For IOS First get the bundle Identifier from the General Tab in the Xcode and create the OAuth Id.
+
+After setting this up - Add deps in the info.plist file - 
+ios -> Thor -> Info.plist
+These Changes will add the schema of the Google Sign in configs in the IOS Build, In key-value pair form. Check the Info.plist file for the google config.
+
+Once all this done we need to set the Google Signin Config on the root - and Set the WebClientId and IOSClientId in the configs.
+```GoogleSignin.configure({webClientId:'944347476169-d90f7vhdqhvjkn1b31h332r8epqe5rqq.apps.googleusercontent.com',forceCodeForRefreshToken: true, iosClientId:'944347476169-1c1ikrh9krvkeeo6n5it55ggtoq2tp9v.apps.googleusercontent.com',})
+```
+
+<!-- Token Redux State Management -->
+The Token and isLoggedIn Check and the state is managed by the Redux in the SocialLogin File under redux Folder under that file we are doing this - *Important - Now this will check the if the Google Services are there or not only if they are we will call the GoogleSignin.signIn() - Which will give the access Token(idToken) and other user detail or perform the signIn functionality.*
+
+<!--Apple Login -->
