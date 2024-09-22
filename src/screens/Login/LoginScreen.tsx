@@ -12,6 +12,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '../../constants/Colors';
 import TouchAbleText from '../../components/CustomText/TouchAbleText';
 import BottomText from '../../components/CustomText/BottomText';
+import { signWithGoogle } from '../../redux/SocialLogin';
 
 const LoginScreen: React.FC = () => {
   const theme = useColorScheme();
@@ -35,9 +36,7 @@ const LoginScreen: React.FC = () => {
       <SocialLoginButton
         icon={<Image source={GoogleIcon} style={{ height: 20, width: 20 }} />}
         text={'Continue With Google'}
-        onPress={() => {
-          console.log('Continue With Google');
-        }}
+        onPress={() => signWithGoogle()}
       />
       <SocialLoginButton
         icon={<Icon name={'logo-apple'} size={18} color={Colors.richBlack} />}
