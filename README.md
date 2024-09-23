@@ -175,10 +175,15 @@ ios -> Thor -> Info.plist
 These Changes will add the schema of the Google Sign in configs in the IOS Build, In key-value pair form. Check the Info.plist file for the google config.
 
 Once all this done we need to set the Google Signin Config on the root - and Set the WebClientId and IOSClientId in the configs.
-```GoogleSignin.configure({webClientId:'944347476169-d90f7vhdqhvjkn1b31h332r8epqe5rqq.apps.googleusercontent.com',forceCodeForRefreshToken: true, iosClientId:'944347476169-1c1ikrh9krvkeeo6n5it55ggtoq2tp9v.apps.googleusercontent.com',})
+```GoogleSignin.configure({
+    webClientId:'944347476169-d90f7vhdqhvjkn1b31h332r8epqe5rqq.apps.googleusercontent.com',
+    forceCodeForRefreshToken: true, 
+    iosClientId:'944347476169-1c1ikrh9krvkeeo6n5it55ggtoq2tp9v.apps.googleusercontent.com',
+  })
 ```
 
 <!-- Token Redux State Management -->
 The Token and isLoggedIn Check and the state is managed by the Redux in the SocialLogin File under redux Folder under that file we are doing this - *Important - Now this will check the if the Google Services are there or not only if they are we will call the GoogleSignin.signIn() - Which will give the access Token(idToken) and other user detail or perform the signIn functionality.*
 
 <!--Apple Login -->
+To setup Apple Signin - 1st. setup the apple dev acc(Do Payment Also) and under the General in the xcode use the signin certificates and get the sign in certificate and the Provision profile. Then add the capability for the Sign in under the xcode and the Apple Developer Account.
