@@ -175,7 +175,11 @@ ios -> Thor -> Info.plist
 These Changes will add the schema of the Google Sign in configs in the IOS Build, In key-value pair form. Check the Info.plist file for the google config.
 
 Once all this done we need to set the Google Signin Config on the root - and Set the WebClientId and IOSClientId in the configs.
-```GoogleSignin.configure({webClientId:'944347476169-d90f7vhdqhvjkn1b31h332r8epqe5rqq.apps.googleusercontent.com',forceCodeForRefreshToken: true, iosClientId:'944347476169-1c1ikrh9krvkeeo6n5it55ggtoq2tp9v.apps.googleusercontent.com',})
+```GoogleSignin.configure({
+    webClientId:'944347476169-d90f7vhdqhvjkn1b31h332r8epqe5rqq.apps.googleusercontent.com',
+    forceCodeForRefreshToken: true, 
+    iosClientId:'944347476169-1c1ikrh9krvkeeo6n5it55ggtoq2tp9v.apps.googleusercontent.com',
+  })
 ```
 
 <!-- Token Redux State Management -->

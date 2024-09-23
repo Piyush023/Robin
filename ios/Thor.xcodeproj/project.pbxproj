@@ -518,7 +518,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M4KZ283XG3;
+				DEVELOPMENT_TEAM = W54BKCFJ99;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Thor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,7 +531,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Thor;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor";
 				PRODUCT_NAME = Thor;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -549,7 +549,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M4KZ283XG3;
+				DEVELOPMENT_TEAM = W54BKCFJ99;
 				INFOPLIST_FILE = Thor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,7 +561,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.Thor;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor";
 				PRODUCT_NAME = Thor;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
