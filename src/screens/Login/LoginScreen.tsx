@@ -38,13 +38,15 @@ const LoginScreen: React.FC = () => {
         text={'Continue With Google'}
         onPress={() => signWithGoogle()}
       />
-      <SocialLoginButton
+
+      {/* Commenting This out becoz for this Apple Dev Account Needed No Money Right Now - Broke AF */}
+      {/* <SocialLoginButton
         icon={<Icon name={'logo-apple'} size={18} color={Colors.richBlack} />}
         text={'Continue With Apple'}
         onPress={() => {
           console.log('Continue With Apple');
         }}
-      />
+      /> */}
 
       {/* Footer */}
       <TouchAbleText

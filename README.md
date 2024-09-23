@@ -186,3 +186,4 @@ Once all this done we need to set the Google Signin Config on the root - and Set
 The Token and isLoggedIn Check and the state is managed by the Redux in the SocialLogin File under redux Folder under that file we are doing this - *Important - Now this will check the if the Google Services are there or not only if they are we will call the GoogleSignin.signIn() - Which will give the access Token(idToken) and other user detail or perform the signIn functionality.*
 
 <!--Apple Login -->
+To setup Apple Signin - 1st. setup the apple dev acc(Do Payment Also) and under the General in the xcode use the signin certificates and get the sign in certificate and the Provision profile. Then add the capability for the Sign in under the xcode and the Apple Developer Account.

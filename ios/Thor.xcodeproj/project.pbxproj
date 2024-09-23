@@ -53,6 +53,7 @@
 		384246F5437643F68BA7605E /* Roboto-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Regular.ttf"; path = "../src/assets/fonts/Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Thor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thor.debug.xcconfig"; path = "Target Support Files/Pods-Thor/Pods-Thor.debug.xcconfig"; sourceTree = "<group>"; };
 		3EE4CCAE64901299E1A623FC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Thor/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		413691582CA1F0E400B351D3 /* Thor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Thor.entitlements; path = Thor/Thor.entitlements; sourceTree = "<group>"; };
 		4D927462BB3B4679866BCEDA /* Manrope-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Manrope-SemiBold.ttf"; path = "../src/assets/fonts/Manrope-SemiBold.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-Thor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thor.release.xcconfig"; path = "Target Support Files/Pods-Thor/Pods-Thor.release.xcconfig"; sourceTree = "<group>"; };
 		57D12546F1DE428BA939BAB7 /* Roboto-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Roboto-Light.ttf"; path = "../src/assets/fonts/Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -107,6 +108,7 @@
 		13B07FAE1A68108700A75B9A /* Thor */ = {
 			isa = PBXGroup;
 			children = (
+				413691582CA1F0E400B351D3 /* Thor.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -515,10 +517,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Thor/Thor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W54BKCFJ99;
+				DEVELOPMENT_TEAM = M4KZ283XG3;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Thor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -531,7 +534,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor-v1";
 				PRODUCT_NAME = Thor;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -546,10 +549,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Thor/Thor.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W54BKCFJ99;
+				DEVELOPMENT_TEAM = M4KZ283XG3;
 				INFOPLIST_FILE = Thor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -561,7 +565,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Piyush-Khurana.Thor-v1";
 				PRODUCT_NAME = Thor;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
