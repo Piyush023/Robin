@@ -8,11 +8,13 @@ import SocialLoginButton from '../../components/CustomButton/SocialLoginButton';
 import LoginDark from '../../assets/images/login_animation_dark.png';
 import LoginLight from '../../assets/images/login_animation_light.png';
 import GoogleIcon from '../../assets/images/google.png';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { Colors } from '../../constants/Colors';
 import TouchAbleText from '../../components/CustomText/TouchAbleText';
 import BottomText from '../../components/CustomText/BottomText';
 import { signWithGoogle } from '../../redux/SocialLogin';
+import { navigate } from '../../utils/NavigationUtil';
+import { Routes } from '../../navigation/Routes';
+// import Icon from 'react-native-vector-icons/Ionicons';
 
 const LoginScreen: React.FC = () => {
   const theme = useColorScheme();
@@ -51,7 +53,7 @@ const LoginScreen: React.FC = () => {
       {/* Footer */}
       <TouchAbleText
         text={'Use Other email Id'}
-        onPress={() => console.log('Use Other Email Id')}
+        onPress={() => navigate(Routes.EMAIL_SCREEN)}
         style={styles.touchAbleText}
       />
       <BottomText />

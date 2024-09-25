@@ -1,0 +1,5 @@
+export enum Routes {
+  LOGIN_SCREEN = 'LOGIN_SCREEN',
+  HOME_SCREEN = 'HOME_SCREEN',
+  EMAIL_SCREEN = 'EMAIL_SCREEN',
+}
