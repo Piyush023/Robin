@@ -16,12 +16,14 @@ interface TouchAbleTextProps {
   text: string;
   onPress: () => void;
   style?: TextStyle;
+  disabled?: boolean;
 }
 
 const TouchAbleText: React.FC<TouchAbleTextProps> = ({
   text,
   onPress,
   style,
+  disabled,
 }) => {
   const { colors } = useTheme();
   /* Imp - Apart from telling about the Theme this also tells about the color -  
@@ -37,7 +39,13 @@ const TouchAbleText: React.FC<TouchAbleTextProps> = ({
   */
   return (
     <TouchableOpacity onPress={onPress}>
-      <Text style={[styles.touchAbleText, style, { color: colors.primary }]}>
+      <Text
+        style={[
+          styles.touchAbleText,
+          style,
+          { color: colors.primary, opacity: disabled ? 0.5 : 1 },
+        ]}
+      >
         {text}
       </Text>
     </TouchableOpacity>
