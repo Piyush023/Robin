@@ -82,7 +82,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
   }, [timer]);
 
   return (
-    <View style={styles.container}>
+    <View style={styles().container}>
       {label && (
         <View>
           <CustomText
@@ -98,7 +98,7 @@ const CustomInput: React.FC<CustomInputProps> = ({
       )}
       <View
         style={[
-          styles.inputContainer,
+          styles().inputContainer,
           {
             borderBottomWidth: isFocused ? 2 : 1,
             borderColor: isFocused ? Colors.themeColor : Colors.dark_border,
@@ -120,10 +120,12 @@ const CustomInput: React.FC<CustomInputProps> = ({
           }}
           placeholder={placeholder}
           cursorColor={colors.primary}
-          style={styles.textInput}
+          style={styles(theme === 'dark').textInput}
           editable={!disabled}
           secureTextEntry={isPassword && isHidden}
-          placeholderTextColor={theme == 'dark' ? '#dadbde' : '#cfd0d3'}
+          placeholderTextColor={
+            theme == 'dark' ? Colors.dark_text : Colors.richBlack
+          }
         />
         {isPassword && (
           <TouchableOpacity
@@ -162,23 +164,24 @@ const CustomInput: React.FC<CustomInputProps> = ({
 
 export default CustomInput;
 
-const styles = StyleSheet.create({
-  container: {
-    paddingVertical: 10,
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginVertical: 5,
-    justifyContent: 'space-between',
-  },
-  textInput: {
-    fontFamily: FONTS.Regular,
-    fontSize: Platform.OS === 'ios' ? RFValue(11) : RFValue(13),
-    alignItems: 'flex-start',
-    height: 28,
-    width: '82%',
-    paddingVertical: 5,
-    color: Colors.dark_text_light,
-  },
-});
+const styles = (isDarkTheme?: boolean) =>
+  StyleSheet.create({
+    container: {
+      paddingVertical: 10,
+    },
+    inputContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginVertical: 5,
+      justifyContent: 'space-between',
+    },
+    textInput: {
+      fontFamily: FONTS.Regular,
+      fontSize: Platform.OS === 'ios' ? RFValue(11) : RFValue(13),
+      alignItems: 'flex-start',
+      height: 28,
+      width: '80%',
+      paddingVertical: 5,
+      color: isDarkTheme ? Colors.dark_text : Colors.richBlack,
+    },
+  });

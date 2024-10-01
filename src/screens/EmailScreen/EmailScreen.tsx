@@ -31,7 +31,6 @@ const EmailScreen: React.FC = () => {
     setShowOTP(true);
     setEmail(data.email);
     setPassword(data.password);
-    console.log('Form Data:', data);
   };
 
   return (
