@@ -25,7 +25,6 @@ const CustomSubmitButton: React.FC<CustomSubmitButtonProps> = ({
 }) => {
   const [animatedValue, setAnimatedValue] = useState(new Animated.Value(0));
 
-  console.log(loading);
   useEffect(() => {
     if (loading) {
       animatedValue.setValue(0);
